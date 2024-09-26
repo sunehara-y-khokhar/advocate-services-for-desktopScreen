@@ -695,10 +695,12 @@ img {
 .copyright::before {
     content: "";
     position: absolute;
-    bottom: 45px;
     background-color: #B3B3B3;
     width: 1140px;
     height: 1px;
+    bottom: 45px;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* footer end */
