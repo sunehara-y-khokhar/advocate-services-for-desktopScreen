@@ -1,0 +1,700 @@
+:root {
+    --primary-text: #192A4E;
+    --secondary-text: #D4B754;
+    --white-text-white: #ffffff;
+    --black-text-black: #000000;
+    /* --gray-text: #464646;
+    --light-white: #c8c8c8; */
+}
+
+/* custom font */
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('../font/Outfit/Outfit-Bold.woff2') format('woff2'),
+        url('../font/Outfit/Outfit-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('../font/Outfit/Outfit-Medium.woff2') format('woff2'),
+        url('../font/Outfit/Outfit-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('../font/Outfit/Outfit-Regular.woff2') format('woff2'),
+        url('../font/Outfit/Outfit-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('../font/Outfit/Outfit-SemiBold.woff2') format('woff2'),
+        url('../font/Outfit/Outfit-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lexend';
+    src: url('../font/Lexend/Lexend-Bold.woff2') format('woff2'),
+        url('../font/Lexend/Lexend-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lexend';
+    src: url('../font/Lexend/Lexend-Medium.woff2') format('woff2'),
+        url('../font/Lexend/Lexend-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lexend';
+    src: url('../font/Lexend/Lexend-Regular.woff2') format('woff2'),
+        url('../font/Lexend/Lexend-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lexend';
+    src: url('../font/Lexend/Lexend-SemiBold.woff2') format('woff2'),
+        url('../font/Lexend/Lexend-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('CormorantGaramond-BoldItalic.woff2') format('woff2'),
+        url('CormorantGaramond-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('CormorantGaramond-Bold.woff2') format('woff2'),
+        url('CormorantGaramond-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('CormorantGaramond-Medium.woff2') format('woff2'),
+        url('CormorantGaramond-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('CormorantGaramond-Regular.woff2') format('woff2'),
+        url('CormorantGaramond-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('CormorantGaramond-SemiBold.woff2') format('woff2'),
+        url('CormorantGaramond-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+}
+
+::selection {
+    background: var(--primary-text);
+    color: var(--white-text-white);
+    text-shadow: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: var(--white-text-white);
+}
+
+img {
+    max-width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.grid-col-3 {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.grid-col-2 {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.position-relative {
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    /* max-width: 1140px; */
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+}
+
+.section-heading {
+    font-size: 30px;
+    letter-spacing: 0px;
+    line-height: 35px;
+    text-transform: uppercase;
+    color: var(--secondary-text);
+    font-weight: 800;
+    font-family: 'Roboto';
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+/* header start */
+.top-navbar {
+    color: var(--white-text-white);
+    background-color: var(--primary-text);
+    padding: 19px 0 15px 0;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    line-height: 24px;
+}
+
+.header-icon {
+    position: relative;
+    font-weight: 700;
+    color: var(--white-text-white);
+}
+
+.header-icon::before {
+    position: absolute;
+    left: -21px;
+    top: 58%;
+    transition: .5s;
+    transform: translateY(-50%);
+
+}
+
+.header-icon.phone-icon::before {
+    content: url(../images/logo/phone-icon.svg);
+
+}
+
+.header-icon.mail-icon::before {
+    content: url(../images/logo/mail-icon.svg);
+
+}
+
+.header-left ul li {
+    display: inline-block;
+    /* text-align: left;
+    position: relative; */
+    padding-left: 22px;
+    margin-right: 6px;
+}
+
+.header-left .d-flex {
+    gap: 16px;
+}
+
+.header-right .d-flex {
+    gap: 6px;
+}
+
+.header-right ul li,
+.header-right ul li a {
+    height: 26px;
+}
+
+.navbar {
+    padding: 24px 0;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .3);
+}
+
+.navbar.sticky-nav {
+    width: 100% !important;
+    transition: .9s;
+    top: 0;
+    position: fixed;
+    z-index: 999;
+}
+
+.nav-list.d-flex {
+    gap: 65px;
+}
+
+.nav-link {
+    color: var(--primary-text);
+    line-height: 24px;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 600;
+    line-height: 24px;
+    color: var(--white-text-white);
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: 8px 16px;
+    font-size: 1rem;
+    border-radius: 8px;
+}
+
+.bookNow-btn {
+    background-color: var(--primary-text);
+}
+
+/* header end */
+
+/* home start */
+.home-section {
+    /* background-color: var(--primary-text);
+    background-image: url(../images/hero.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh; */
+
+
+
+
+    /* background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    height: 653px; */
+    /* padding-top: 155px; */
+    margin-top: 1px;
+
+    position: relative;
+}
+
+.hero-img {
+    position: relative;
+}
+
+.home-section::before {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: -9px;
+    background-color: transparent;
+    background-image: url(../images/hero1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 73.61px;
+    height: 55.42px;
+
+}
+
+.home-section::after {
+    content: "";
+    position: absolute;
+    top: 50px;
+    right: 8.23px;
+    background-color: transparent;
+    background-image: url(../images/hero2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 54px;
+    height: 74px;
+}
+
+/* 
+.hero-img img:nth-child(2n) {
+    position: absolute;
+    right: 0;
+    left: unset;
+}
+
+.hero-img img:nth-child(3n) {
+    position: absolute;
+    right: 0;
+    left: unset;
+    bottom: 20px;
+} */
+
+/* home end */
+
+/* about us start */
+.about-us-wrapper {
+    background-color: var(--primary-text);
+    position: relative;
+    padding: 50px 36px 39px;
+    border-radius: 7px 0 0 7px;
+}
+
+.about-us-section {
+    position: relative;
+    margin-top: -78px;
+}
+
+.about-us-section::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: -49px;
+    background-color: transparent;
+    background-image: url(../images/hero3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 47px;
+    height: 35px;
+}
+
+.about-us-title {
+    font-size: 36px;
+    line-height: 48px;
+    color: var(--white-text-white);
+    font-family: 'Cormorant Garamond';
+    font-weight: bold;
+    margin-bottom: 21px;
+}
+
+.about-us-title span {
+    color: var(--secondary-text);
+    font-style: italic;
+}
+
+.about-text {
+    color: var(--white-text-white);
+    font-family: 'Outfit';
+    font-weight: normal;
+    font-style: normal;
+    line-height: 22px;
+    margin-bottom: 21px;
+}
+
+.about-btn {
+    background-color: var(--secondary-text);
+}
+
+/* about us end */
+
+/* service start */
+.service-section {
+    padding-top: 100px;
+    padding-bottom: 82px;
+}
+
+.section-title {
+    color: var(--primary-text);
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Cormorant Garamond';
+    font-weight: bold;
+    font-style: normal;
+    line-height: 48px;
+    position: relative;
+    margin-bottom: 52px;
+}
+
+.section-title::before,
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 25%;
+    top: 22px;
+    width: 141px;
+    height: 2px;
+    background-color: var(--secondary-text);
+}
+
+.section-title::after {
+    left: unset;
+    right: 25%;
+}
+
+.service-wrapper.grid-col-3 {
+    gap: 39px;
+}
+
+.service-title {
+    color: var(--primary-text);
+    margin-top: 24px;
+    margin-bottom: 31px;
+    font-size: 22px;
+    font-family: 'Outfit';
+    font-weight: 600;
+    font-style: normal;
+    line-height: 120%;
+}
+
+.service-btn {
+    color: var(--secondary-text);
+    font-family: 'Outfit';
+    font-weight: 600;
+    font-style: normal;
+    line-height: 120%;
+}
+
+.service-img {
+    position: relative;
+}
+
+.service-img img {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.service-img:hover img,
+.service-img.service-active img {
+    opacity: 0.3;
+}
+
+.service-img:hover .service-hover-effect,
+.service-img.service-active .service-hover-effect {
+    opacity: 1;
+}
+
+.service-hover-effect {
+    opacity: 0;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: .5s ease;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.service-hover-effect span {
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    background-color: var(--secondary-text);
+    border-radius: 50%;
+}
+
+/* service end */
+
+/* mission start */
+.mission-section {
+    padding-top: 39px;
+    padding-bottom: 52px;
+    background-color: var(--primary-text);
+}
+
+.mission-section .section-title {
+    color: var(--white-text-white);
+    margin-bottom: 24px;
+}
+
+.mission-section .section-text {
+    max-width: 899px;
+    color: var(--white-text-white);
+    text-align: center;
+    margin: 0 auto 63px;
+
+}
+
+.mission-wrapper {
+    margin: 0 209px 55px;
+}
+
+.mission-items {
+    margin: 0 auto;
+    width: 190px;
+    height: 190px;
+}
+
+.mission-items span {
+    padding: 49px;
+    display: inline-block;
+    margin: 0 auto;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+.grid-col-4 {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 91px;
+}
+
+.mission-title {
+    /* font-size: 40px; */
+    font-size: 35px;
+    text-align: center;
+    margin-top: 29px;
+    color: #fff;
+    font-family: 'Cormorant Garamond';
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* mission end */
+
+/* testimonial start */
+.testimonial-section {
+    padding-top: 82px;
+    padding-bottom: 72px;
+}
+
+/* testimonial end */
+
+/* logo start */
+.logo-section {
+    background-color: var(--primary-text);
+    /* padding-top: 118px; */
+    /* padding-bottom: 118px; */
+    /* margin: 0 auto; */
+    border-top: 1px solid var(--secondary-text);
+    border-bottom: 1px solid var(--secondary-text);
+}
+
+.logo-wrapper {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.logo-items {
+    border-right-width: 1px;
+    --tw-border-opacity: 1;
+    border-right: 1px solid var(--secondary-text);
+    border-color: var(--secondary-text);
+    padding: 1.25rem;
+    padding-top: 118px;
+    padding-bottom: 118px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.logo-items:last-child {
+    border-right: none;
+}
+
+.logo-items a img {
+    display: block;
+}
+
+/* logo end */
+
+/* footer start */
+.footer {
+    background-color: var(--primary-text);
+    color: var(--white-text-white);
+    padding-top: 59px;
+    padding-bottom: 45px;
+}
+
+.footer-wrapper {
+    margin-bottom: 102px;
+}
+
+.footer-content {
+    max-width: 358px;
+    margin-top: 35px;
+    margin-bottom: 27px;
+}
+
+.footer h3 {
+    color: var(--secondary-text);
+    font-size: 30px;
+    font-family: 'Cormorant Garamond';
+    font-weight: bold;
+    font-style: italic;
+    line-height: 32px;
+    margin-bottom: 19px;
+}
+
+.footer-content:last-child {
+    max-width: 337px;
+    margin: 0;
+}
+
+.footer-item .expertise-list.d-flex {
+    flex-direction: column;
+}
+
+.footer-item .expertise-list.d-flex li {
+    list-style-type: disc;
+}
+
+.copyright {
+    position: relative;
+}
+
+.copyright::before {
+    content: "";
+    position: absolute;
+    bottom: 45px;
+    background-color: #B3B3B3;
+    width: 1140px;
+    height: 1px;
+}
+
+/* footer end */
