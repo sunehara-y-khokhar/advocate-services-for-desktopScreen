@@ -682,10 +682,20 @@ img {
 
 .footer-item .expertise-list.d-flex {
     flex-direction: column;
+    align-items: flex-start;
 }
 
 .footer-item .expertise-list.d-flex li {
     list-style-type: disc;
+    list-style-position: inside;
+}
+
+.footer-social-icons {
+    justify-content: flex-start;
+}
+
+.footer-contact-mail {
+    margin-bottom: 12px;
 }
 
 .copyright {
@@ -701,6 +711,63 @@ img {
     bottom: 45px;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.news-letter {
+    width: 493px;
+}
+
+.footer-expertise {
+    width: 210px;
+}
+
+.footer-mail {
+    margin-bottom: 48px;
+}
+
+.form-control {
+    position: relative;
+    width: 100%;
+    margin: 14px 0;
+}
+
+.form-control input {
+    display: block;
+    width: 100%;
+    color: var(--white-text-white);
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px var(--white-text-white) solid;
+    padding: 15px 0;
+    font-size: 16px;
+
+}
+
+.form-control input:focus,
+.form-control input:valid {
+    outline: 0;
+    border-bottom-color: var(--white-text-white);
+}
+
+.form-control label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+}
+
+.form-control label span {
+    display: inline-block;
+    color: var(--white-text-white);
+    font-size: 16px;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus+label span,
+.form-control input:valid+label span {
+    color: var(--secondary-text);
+    transform: translateY(-26px);
 }
 
 /* footer end */
