@@ -8,3 +8,16 @@ function myFunction() {
         navbar.classList.remove("sticky-nav");
     }
 }
+
+var swiper = new Swiper(".testimonial-wrapper", {
+    slidesPerView: 3,
+    slidesPerGroup: 3,
+    spaceBetween: 30,
+    loop: true,
+    speed: 1300,
+    autoplay: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+    }
+});
